@@ -17,7 +17,7 @@ def initParser():
 
 def initConfig(filename):
     config = ConfigParser()
-    config.read('settings.ini')
+    config.read(filename)
     return config
 
 
