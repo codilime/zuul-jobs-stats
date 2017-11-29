@@ -6,9 +6,9 @@ import subprocess
 
 
 class LogEntry():
-    __buildid_query = '''.[]["plays"][]["tasks"][]["hosts"][]
-                         ["invocation"]["module_args"]["zuul"]["build"] 
-                         | values'''
+    __buildid_query = '''[ .[]["plays"][]["tasks"][]["hosts"][]
+                           ["invocation"]["module_args"]["zuul"]["build"]
+                         ] | del(.[] | select(. == null)) | .[0]'''
 
     __steptime_query = '''[.[]["plays"][]["tasks"][]
                               | select(.["task"]["name"]
