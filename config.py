@@ -14,6 +14,7 @@ def initParser():
     args = parser.parse_args()
     return args
 
+
 def initConfig(filename):
     config = ConfigParser()
     config.read('settings.ini')
@@ -32,7 +33,7 @@ def initLogging(config):
     logging.basicConfig(filename=config.get('logging', 'file'),
                         level=level,
                         format=FORMAT,
-                        datefmt='%Y-%m-%d %H:%M:%S %Z')
+                        datefmt='%Y-%m-%d %H:%M:%S%Z')
 
 
 def initDatabase(config):

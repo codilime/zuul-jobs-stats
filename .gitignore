@@ -2,4 +2,7 @@
 *.log
 *.db
 logs*/
+
+# Do not commit your configs :-)
 settings.ini
+cron-config.sh

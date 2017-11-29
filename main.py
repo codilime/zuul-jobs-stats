@@ -1,5 +1,6 @@
-from log_entry import LogEntry
-from conf import initConfig, initDatabase, initLogging, initParser
+#!/usr/bin/env python
+from logentry import LogEntry
+from config import initConfig, initDatabase, initLogging, initParser
 from os.path import exists
 import logging
 
